@@ -10,7 +10,21 @@ puts "----------"
 
 # Your code goes here ...
 
+@store1.employees.create(first_name: "Forrest", last_name: "Magruff", hourly_rate: 99)
+@store1.employees.create(first_name: "Alphie", last_name: "Barkhead", hourly_rate: 23)
+@store1.employees.create(first_name: "Crazy", last_name: "Daizy", hourly_rate: 25)
 
+@store2.employees.create(first_name: "Clemantine", last_name: "Kitty", hourly_rate: 25)
+@store1.employees.create(first_name: "Lilly", last_name: "Cat", hourly_rate: 50)
+@store1.employees.create(first_name: "Mica", last_name: "Meow", hourly_rate: 75)
+
+# create_table :employees do |table|
+#     table.references :store
+#     table.column :first_name, :string
+#     table.column :last_name, :string
+#     table.column :hourly_rate, :integer
+#     table.timestamps null: false
+#   end
 
 ### Exercise 6: One-to-many association
 # We haven't used the Employee class (and employees table) at all yet. If you look at this table's column structure, you'll find that it has a `store_id` (integer) column. This is a column that identifies which store each employee belongs to. It points to the `id` (integer) column of their store.
